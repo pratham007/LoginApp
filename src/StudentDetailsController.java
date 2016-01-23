@@ -1,3 +1,8 @@
+
+
+//Cloud Manthan
+
+
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
@@ -41,8 +46,8 @@ public class StudentDetailsController extends HttpServlet {
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			Connection con = DriverManager.getConnection(
-					"jdbc:oracle:thin:@192.168.1.11:1521:ftgdev", "cpg_prod",
-					"dev123");
+					"jdbc:oracle:thin:@localhost:1521:xe", "system",
+					"system");
 			Statement st = con.createStatement();
 			ResultSet rs = st
 					.executeQuery("Select CONATCT_ID, FIRST_NAME, LAST_NAME, BIRTH_DATE from stud_dtl");
